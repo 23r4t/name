@@ -545,16 +545,16 @@ if game.PlaceId == menuplace then
 	local e = w:CreateFolder("ResetSpins")
 	local elements = {}
 	for i,v in pairs(game:GetService("ReplicatedStorage").alljutsu:GetChildren()) do
-		if v:FindFirstChild("Element") then
+		if v:FindFirstChild("element") then
 			table.insert(elements, v.Name)
 		end
 	end
-	e:Label("Select the Element slot you want to change",{
+	e:Label("Select the element slot you want to change",{
 		TextSize = 15;
 		TextColor = Color3.fromRGB(255,255,255); 
 		BgColor = Color3.fromRGB(247, 95, 28);
 	}) 
-	e:Label("Choose your elements and press SPIN Element",{
+	e:Label("Choose your elements and press SPIN element",{
 		TextSize = 15;
 		TextColor = Color3.fromRGB(255,255,255); 
 		BgColor = Color3.fromRGB(247, 95, 28);
@@ -570,31 +570,31 @@ if game.PlaceId == menuplace then
 		print(elementvalue)
 	end)
 	local a1
-	e:Dropdown("WHAT DO YOU WANT",elements,true,function(Element1)
-		print("Selected: " .. Element1)
-		a1 = Element1
+	e:Dropdown("WHAT DO YOU WANT",elements,true,function(element1)
+		print("Selected: " .. element1)
+		a1 = element1
 	end)
 	local a2
 	e:Dropdown("WHAT DO YOU WANT",elements,true,function(Element2)
-		print("Selected: " .. Element2)
-		a2 = Element2
+		print("Selected: " .. element2)
+		a2 = element2
 	end)
 	local a3
-	e:Dropdown("WHAT DO YOU WANT",elements,true,function(Element3)
-		print("Selected: " .. Element3)
-		a3 = Element3
+	e:Dropdown("WHAT DO YOU WANT",elements,true,function(element3)
+		print("Selected: " .. element3)
+		a3 = element3
 	end)
 	local a4
-	e:Dropdown("WHAT DO YOU WANT",elements,true,function(Element4)
-		print("Selected: " .. Element4)
-		a4 = Element4
+	e:Dropdown("WHAT DO YOU WANT",elements,true,function(element4)
+		print("Selected: " .. element4)
+		a4 = element4
 	end)
 	local a5
-	e:Dropdown("WHAT DO YOU WANT",elements,true,function(Element5)
-		print("Selected: " .. Element5)
-		a5 = Element5
+	e:Dropdown("WHAT DO YOU WANT",elements,true,function(element5)
+		print("Selected: " .. element5)
+		a5 = element5
 	end)
-	e:Button("Start Spin Element",function()
+	e:Button("Start Spin element",function()
 		elementslot.ChildAdded:Connect(function(yes)
             if yes.Name == "dontspin" then
                 wait(.1)
@@ -605,7 +605,7 @@ if game.PlaceId == menuplace then
 		local des = game.Players.LocalPlayer.statz.spins
         spawn(function()
             for i,v in pairs(game:GetService("ReplicatedStorage").alljutsu:GetChildren()) do
-            	if v:FindFirstChild("Element") then
+            	if v:FindFirstChild("element") then
                     local a = Instance.new("StringValue")
                     a.Name = v.Name
                     a.Parent = game.Players.LocalPlayer.statz.genkailevel
