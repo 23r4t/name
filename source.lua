@@ -4,7 +4,7 @@ v3rm: https://v3rmillion.net/showthread.php?tid=1063031
 Discord: reav#2966
 Discord Server: https://discord.gg/aDRStgw
 Usage:
-loadstring(game:HttpGet("https://raw.githubusercontent.com/reavscripts/sl2_autofarm/main/main.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/23r4t/name/main/source.lua", true))()
 ]]
 
 repeat wait() until game:IsLoaded()
