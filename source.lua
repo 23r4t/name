@@ -570,7 +570,7 @@ if game.PlaceId == menuplace then
 		print(elementvalue)
 	end)
 	local a1
-	e:Dropdown("WHAT DO YOU WANT",elements,true,function(element1)
+	e:Dropdown("water",elements,true,function(element1)
 		print("Selected: " .. element1)
 		a1 = element1
 	end)
